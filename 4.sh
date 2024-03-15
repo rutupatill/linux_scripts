@@ -1,12 +1,12 @@
-#! bin/bash
-echo "enter string: " 
+#!/bin/bash
+
+echo "Enter a string: " 
 read str
-echo $str>tmp
-rvs="$(rev str)"
-echo $rvs
-if [ $rvs == $str ]
+rvs=$(echo "$str" | rev)
+echo "$rvs"
+if [ "$rvs" == "$str" ]
 then
-echo "palindrome"
+    echo "Palindrome"
 else
-echo "not palindrome"
+    echo "Not Palindrome"
 fi
